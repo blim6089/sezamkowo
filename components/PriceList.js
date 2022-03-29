@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
 import Button from "@/components/Button";
@@ -13,7 +13,13 @@ import SunDanger from "@/assets/images/icons/sun-danger.svg";
 import FoodDanger from "@/assets/images/icons/food-danger.svg";
 
 const PriceList = (props) => {
+  console.log(props.target);
   const [active, setActive] = useState(props.target || "new");
+
+  useEffect(() => {
+    setActive(props.target || "new");
+  }, [props.target]);
+
   const data = {
     new: [
       {

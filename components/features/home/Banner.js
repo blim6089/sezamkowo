@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import BannerImage from "@/assets/images/home/banner.png";
 import HomeWarning from "@/assets/images/home/home-warning.svg";
 import HomeDanger from "@/assets/images/home/home-danger.svg";
@@ -20,22 +21,26 @@ const Banner = () => {
           poszanowania dla potrzeb każdego dziecka.
         </p>
         <div className="flex justify-center">
-          <button className="mx-14 flex items-center bg-white shadow hover:shadow-lg transition rounded-2xl p-10">
-            <div className="w-[102px] h-[90px] flex items-center justify-center rounded-2xl bg-[#FFF3EB] border border-[#FFA25E]">
-              <Image src={HomeWarning} />
-            </div>
-            <span className="mx-5 font-bold text-2xl text-[#FFA25E]">
-              Nowy Wawer
-            </span>
-          </button>
-          <button className="mx-14 flex items-center bg-white shadow hover:shadow-lg transition rounded-2xl p-10">
-            <div className="w-[102px] h-[90px] flex items-center justify-center rounded-2xl bg-[#FFEDF0] border border-[#FF8FA3]">
-              <Image src={HomeDanger} />
-            </div>
-            <span className="mx-5 font-bold text-2xl text-[#FF8FA3]">
-              Marysin wAwerski
-            </span>
-          </button>
+          <Link href="/location/new">
+            <a className="mx-14 flex items-center bg-white shadow hover:shadow-lg transition rounded-2xl p-10">
+              <div className="w-[102px] h-[90px] flex items-center justify-center rounded-2xl bg-[#FFF3EB] border border-[#FFA25E]">
+                <Image src={HomeWarning} />
+              </div>
+              <span className="mx-5 font-bold text-2xl text-[#FFA25E]">
+                Nowy Wawer
+              </span>
+            </a>
+          </Link>
+          <Link href="/location/old">
+            <a className="mx-14 flex items-center bg-white shadow hover:shadow-lg transition rounded-2xl p-10">
+              <div className="w-[102px] h-[90px] flex items-center justify-center rounded-2xl bg-[#FFEDF0] border border-[#FF8FA3]">
+                <Image src={HomeDanger} />
+              </div>
+              <span className="mx-5 font-bold text-2xl text-[#FF8FA3]">
+                Marysin wAwerski
+              </span>
+            </a>
+          </Link>
         </div>
       </div>
     </div>

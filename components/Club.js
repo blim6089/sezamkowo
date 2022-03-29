@@ -5,6 +5,7 @@ import Phone from "@/assets/images/icons/phone.svg";
 import Time from "@/assets/images/icons/time.svg";
 import Calendar from "@/assets/images/icons/calendar.svg";
 import MapPin from "@/assets/images/icons/map-pin.svg";
+import Schedule from "@/assets/images/schedule.png";
 
 import ClubImage1 from "@/assets/images/clubs/1.png";
 import ClubImage2 from "@/assets/images/clubs/2.png";
@@ -63,7 +64,9 @@ const Club = (props) => {
           )}
         </div>
         <div className={`flex py-2 px-[165px] ${props.target ? `pt-10` : ``}`}>
-          <div className="w-2/3"></div>
+          <div className="w-2/3">
+            <Image src={Schedule} />
+          </div>
           <div className="w-1/3 pl-3">
             <div className="border border-[#DDDDDD] rounded-2xl pt-[18px] px-5 pb-8 bg-white">
               <p className="font-bold text-2xl text-[#FFA25E] mb-7 uppercase">

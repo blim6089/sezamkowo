@@ -5,11 +5,11 @@ import Share from "@/assets/images/icons/share.svg";
 
 const Post = (props) => {
   return (
-    <div className="relative">
-      <div>
+    <div className="relative transition shadow-teamCard hover:shadow-cardHover rounded-2xl overflow-hidden">
+      <div className="flex">
         <Image src={props.image} />
       </div>
-      <div className="p-5 min-h-[233px] pb-[14px] rounded-b-2xl absolute left-0.5 bottom-3 right-0.5 bg-gradient-to-t from-[#FFFFFF] to-[#FFFFFF50]">
+      <div className="p-5 min-h-[233px] pb-[14px] rounded-b-2xl absolute left-0 right-0 bottom-0 bg-gradient-to-t from-[#FFFFFF] to-[#FFFFFF50]">
         <div className="flex flex-wrap mb-2">
           {props.categories.map((category, index) => (
             <div key={index} className="px-[5px]">

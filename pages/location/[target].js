@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/Button";
+import { useRouter } from "next/router";
 
 import Check from "@/assets/images/icons/circle-check.svg";
 import Line from "@/assets/images/line.png";
@@ -7,6 +8,7 @@ import MapPin from "@/assets/images/icons/map-pin.svg";
 import GoogleMap from "@/components/GoogleMap";
 import Gallery from "@/components/Gallery";
 import Club from "@/components/Club";
+import ContactForm from "@/components/ContactForm";
 
 import Photo1 from "@/assets/images/gallery/1.png";
 import Photo5 from "@/assets/images/gallery/5.png";
@@ -20,6 +22,13 @@ import Photo30 from "@/assets/images/gallery/30.png";
 import PriceList from "components/PriceList";
 
 export default function Location() {
+  const title = {
+    new: "Nowy Wawer",
+    old: "Marysin Wawerski",
+  };
+
+  const router = useRouter();
+  const { target } = router.query;
   const items = [
     {
       title: "Bogatą ofertę dydaktyczno wychowawczą",
@@ -53,12 +62,26 @@ export default function Location() {
     },
   ];
 
+  const informations = [
+    "Sale są dostosowane do wieku dzieci, wyposażone w certyfikowane urządzenia i zabawki. Wnętrza są specjalnie projektowane pod kątem rozwoju najmłodszych i inspirowane pomocami stosowanymi przez Marię Montessori.  Dzieci bawią się i uczą w wybranych przez siebie kącikach tematycznych.",
+    "Posiadamy duży plac zabaw gdzie dzieci bawią się i poznają świat",
+    "Nasze sale oraz zabawki są codziennie starannie myte, czyszczone i dezynfekowane.",
+    "Posiadamy oczyszczacze, które dbają o zdrowe i wolne od zanieszczyszczeń powietrze w salach. ",
+    "Menu dzieci jest przygotowane przez dietetyka oraz dostosowane do indywidualnych potrzeb dzieci. Uwzględnia diety i specjalne potrzeby żywieniowe. ",
+  ];
+
   return (
     <div>
       <div className="max-w-[1596px] mx-auto">
         <div className="flex justify-between pt-[55px] pb-[95px]">
           <div className="pt-8 max-w-[700px]">
-            <p className="font-bold text-5xl text-[#FFA25E] mb-6">Nowy Wawer</p>
+            <p
+              className={`font-bold text-5xl mb-6 ${
+                target === `new` ? `text-[#FFA25E]` : `text-[#FF8FA3]`
+              }`}
+            >
+              {title[target]}
+            </p>
             <p className="text-lg text-[#463F3A] leading-6 mb-6">
               Żłobek w otoczeniu kameralnych domków jednorodzinnych, wokół
               spokój i cisza, miejsce otoczone zielenią, nad brzegiem kanałku
@@ -109,7 +132,7 @@ export default function Location() {
           </div>
         </div>
       </div>
-      <div className="pt-9 pb-16 bg-[#F6F6F6]">
+      <div className="pt-9 pb-14 bg-[#F6F6F6]">
         <div className="max-w-[1296px] mx-auto">
           <p className="font-bold text-4xl text-[#605954] text-center mb-10">
             GALERIA ZDJĘĆ
@@ -130,10 +153,31 @@ export default function Location() {
         </div>
       </div>
       <div className="mx-auto max-w-[1090px] flex flex-col items-center pt-[110px] pb-[150px]">
-        <p className="text-center">Dodatkowe informacje</p>
-        <PriceList target="new" />
+        <p className="font-bold text-4xl text-[#605954] text-center mb-10">
+          Dodatkowe informacje
+        </p>
+        <ul>
+          {informations.map((information, index) => (
+            <li key={index} className="flex mb-10">
+              <span
+                className={`mt-1.5 flex-shrink-0 w-2.5 h-2.5 rounded-full border ${
+                  router.query?.target === `new`
+                    ? `border-[#FFA25E] bg-[#FFD1B0]`
+                    : `border-[#FF8FA3] bg-[#FFD4DC]`
+                }`}
+              />
+              <span className="text-base leading-5 text-[#463F3A] ml-3.5">
+                {information}
+              </span>
+            </li>
+          ))}
+        </ul>
+        <PriceList target={target} />
       </div>
-      <Club target="new" />
+      <Club target={target} />
+      <div className="flex justify-center py-16">
+        <ContactForm />
+      </div>
     </div>
   );
 }
