@@ -10,18 +10,20 @@ const Organization = () => {
     "Mamy ogromną nadzieję, że w tej trudnej sytuacji zachowując maksimum ostrożności i higieny, wspólnie z Państwem zapewnimy dzieciom bezpieczne warunki przebywania w żłobku.",
   ];
   return (
-    <div className="flex justify-center pt-12 pb-24">
+    <div className="flex justify-center px-5 py-8 lg:pt-12 lg:pb-24">
       <div className="max-w-[1375px] flex flex-col">
-        <p className="font-bold text-4xl text-[#646464] mb-12 text-center">
+        <p className="hidden lg:block font-bold text-4xl text-[#646464] mb-12 text-center">
           Organizacja
         </p>
         <ul>
           {items.map((item, index) => (
             <li key={index} className="flex items-start mb-6">
-              <div className="w-6 h-6 flex-shrink-0">
+              <div className="w-6 h-6 flex-shrink-0 brightness-0 invert-1 lg:brightness-100 lg:invert-0">
                 <Image src={Check} />
               </div>
-              <span className="ml-[27px] text-base text-[#463F3A]">{item}</span>
+              <span className="ml-[27px] text-lg lg:text-base text-[#463F3A]">
+                {item}
+              </span>
             </li>
           ))}
         </ul>

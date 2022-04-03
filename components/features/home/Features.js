@@ -33,14 +33,17 @@ const Features = () => {
     },
   ];
   return (
-    <div className="flex justify-between bg-[#F6F6F6] pt-12 pb-[72px] px-[180px]">
+    <div className="flex flex-wrap justify-between bg-[#F6F6F6] py-5 xl:pt-12 xl:pb-[72px] px-5 2xl:px-[180px]">
       {items.map((item, index) => {
         return (
-          <div key={index} className="max-w-[317px] flex flex-col items-center">
-            <div className="w-20 h-20 flex items-center justify-center mb-6">
+          <div
+            key={index}
+            className="w-full xl:w-1/2 2xl:w-1/4 flex flex-col items-center mb-6 xl:mb-0"
+          >
+            <div className="w-20 h-20 flex items-center justify-center mb-14 xl:mb-6">
               <Image src={item.icon} />
             </div>
-            <p className="font-bold text-2xl text-[#FFA25E] mb-6 text-center">
+            <p className="font-bold text-2xl text-[#FFA25E] mb-3 xl:mb-6 text-center">
               {item.title}
             </p>
             <p className="text-lg text-[#463F3A] leading-6 text-center">

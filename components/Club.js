@@ -26,12 +26,12 @@ const Club = (props) => {
       ></div>
       <div className="relative z-10">
         <div
-          className={`flex flex-col items-center py-5 ${
+          className={`flex flex-col items-center px-5 2xl:px-0 py-5 ${
             props.target ? `bg-[#F6F6F6]` : `bg-transparent`
           }`}
         >
           <p
-            className={`font-bold text-4xl text-center text-[#463F3A] mb-6 ${
+            className={`font-bold text-[27px] xl:text-4xl text-center text-[#463F3A] mb-6 ${
               props.page ? `uppercase` : ``
             }`}
           >
@@ -39,21 +39,21 @@ const Club = (props) => {
               Klubik Sezamkowo {props.target ? `- ${label[props.target]}` : ``}
             </span>
           </p>
-          <p className="max-w-[945px] text-base text-[#463F3A] text-center leading-5 mb-10">
+          <p className="max-w-[945px] text-lg xl:text-base text-[#463F3A] text-center leading-5 mb-10">
             Jest to cykl cotygodniowych zajęć sensorycznych dla dzieci od 1,5 do
             4 lat. W zajęciach uczestniczą razem rodzic i dziecko. Weźcie
             koniecznie coś na przebranie, będzie brudzenie się, taplanie i masa
             sensorycznych, wielowymiarowych doświadczeń.
           </p>
           {!props.page && (
-            <div className="flex justify-center">
-              <span className="min-w-[400px] flex items-center justify-center">
+            <div className="flex flex-col lg:flex-row justify-center">
+              <span className="w-full lg:min-w-[400px] flex items-center justify-center mb-4 lg:mb-0">
                 <Image src={Phone} />
                 <span className="text-base text-[#463F3A] mx-2">
                   +48 785 900 905
                 </span>
               </span>
-              <span className="min-w-[400px] flex items-center justify-center">
+              <span className="w-full lg:min-w-[400px] flex items-center justify-center mb-4 lg:mb-0">
                 <Image src={Email} />
                 <span className="text-base text-[#463F3A] mx-2">
                   email{" "}
@@ -63,11 +63,17 @@ const Club = (props) => {
             </div>
           )}
         </div>
-        <div className={`flex py-2 px-[165px] ${props.target ? `pt-10` : ``}`}>
-          <div className="w-2/3">
-            <Image src={Schedule} />
+        <div
+          className={`flex py-2 px-0 2xl:px-[165px] ${
+            props.target ? `pt-10` : ``
+          } ${props.page ? `pl-5` : ``}`}
+        >
+          <div className="w-full xl:w-2/3 overflow-x-scroll xl:overflow-x-hidden">
+            <div className="flex justify-center w-full min-w-[800px]">
+              <Image src={Schedule} />
+            </div>
           </div>
-          <div className="w-1/3 pl-3">
+          <div className="w-1/3 pl-3 hidden xl:block">
             <div className="border border-[#DDDDDD] rounded-2xl pt-[18px] px-5 pb-8 bg-white">
               <p className="font-bold text-2xl text-[#FFA25E] mb-7 uppercase">
                 Sensoryka dla Smyka!

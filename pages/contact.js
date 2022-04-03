@@ -26,13 +26,15 @@ export default function Contact() {
 
   return (
     <div>
-      <div className="flex justify-between max-w-[1640px] mx-auto pt-16 pb-10">
+      <div className="flex flex-col 2xl:flex-row justify-between max-w-[1640px] mx-auto pt-5 lg:pt-16 pb-10 px-5">
         {locations.map((location) => (
-          <LocationCard {...location} key={location.id} />
+          <div key={location.id} className="mb-6 2xl:mb-0">
+            <LocationCard {...location} />
+          </div>
         ))}
       </div>
       <div className="flex flex-col items-center justify-center bg-[#F2F3F3] p-5 pb-7">
-        <p className="text-lg text-[#463F3A] mb-7">
+        <p className="text-lg text-[#463F3A] mb-7 text-center">
           Odwiedź nasze media społecznościowe
         </p>
         <div className="flex items-center">

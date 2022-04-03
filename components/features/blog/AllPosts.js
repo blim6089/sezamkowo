@@ -97,15 +97,15 @@ const RecentPosts = () => {
   ];
 
   return (
-    <div className="flex justify-center pt-8 pb-16">
+    <div className="flex justify-center px-5 pt-8 pb-16">
       <div className="w-full max-w-[1590px]">
         <p className="text-lg text-[#646464] mb-9 relative">
           Wszystkie wpisy
           <span className="w-[200px] h-[1px] bg-[#646464] absolute -bottom-3.5 left-0"></span>
         </p>
-        <div className="flex flex-wrap -mx-7">
+        <div className="flex justify-center flex-wrap 2xl:-mx-7">
           {posts.map((post, index) => (
-            <div className="w-1/4 px-7 mb-8" key={index}>
+            <div className="px-0 md:px-5 lg:px-7 mb-8" key={index}>
               <Post {...post} />
             </div>
           ))}

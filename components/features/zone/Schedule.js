@@ -56,21 +56,24 @@ const Schedule = () => {
   ];
 
   return (
-    <div className="flex justify-center py-8 bg-[#F6F6F6]">
+    <div className="flex justify-center px-5 py-6 lg:py-8 bg-[#F6F6F6]">
       <div className="w-full max-w-[670px]">
-        <p className="font-bold text-4xl text-[#463F3A] text-center mb-[50px]">
+        <p className="font-bold text-[27px] lg:text-4xl text-[#463F3A] text-center mb-11 lg:mb-[50px]">
           Plan Dnia
         </p>
         <div className="pl-11 relative">
-          <div className="flex absolute top-0 left-0">
+          <div className="flex absolute h-full top-0 left-0">
             <Image src={ArrowLine} />
           </div>
           {items.map((item, index) => (
-            <div className="flex justify-between items-center" key={index}>
-              <span className="max-w-[467px] font-medium text-xl text-[#463F3A] mb-5">
+            <div
+              className="flex justify-between items-center mb-3 lg:mb-5"
+              key={index}
+            >
+              <span className="max-w-[467px] font-medium text-base lg:text-xl pr-6 text-[#463F3A]">
                 {item.label}
               </span>
-              <span className="font-light text-lg text-[#463F3A]">
+              <span className="shrink-0 font-light text-lg text-[#463F3A]">
                 {item.time}
               </span>
             </div>

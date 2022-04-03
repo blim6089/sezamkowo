@@ -26,7 +26,7 @@ import LocationPhoto8 from "@/assets/images/gallery/location/8.png";
 export default function GalleryPage() {
   return (
     <div>
-      <div className="pt-[68px] pb-[35px]">
+      <div className="pt-14 lg:pt-[68px] pb-[35px] px-5">
         <div className="mx-auto max-w-[1596px]">
           <p className="font-bold text-4xl text-[#605954] text-center mb-[30px]">
             GALERIA ZDJĘĆ
@@ -61,13 +61,13 @@ export default function GalleryPage() {
           />
         </div>
       </div>
-      <div className="pt-9 pb-[72px] bg-[#F6F6F6]">
+      <div className="pt-3 xl:pt-9 pb-14 xl:pb-[72px] bg-[#F6F6F6] px-0 xl:p-5">
         <div className="mx-auto max-w-[1596px]">
-          <p className="relative font-bold text-[27px] text-[#605954] mb-[52px]">
+          <p className="relative font-bold text-[27px] text-[#605954] mb-10 xl:mb-[52px] px-5 xl:px-0">
             Nasza codzienność
-            <span className="absolute w-[273px] h-[1px] bg-[#646464] top-[53px] left-0"></span>
+            <span className="absolute w-[273px] h-[1px] bg-[#646464] top-[53px] left-5 xl:left-0"></span>
           </p>
-          <div className="flex flex-col items-center -m-2">
+          <div className="flex flex-col items-center px-3 xl:px-0 xl:-m-2">
             <Gallery
               photos={[
                 Photo17,

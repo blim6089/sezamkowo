@@ -74,8 +74,8 @@ export default function Home() {
       <Banner />
       <Features />
       <OurTeam />
-      <div className="flex flex-col items-center bg-[#F6F6F6] py-[30px] px-40">
-        <p className="font-bold text-4xl text-[#605954] mb-6 text-center">
+      <div className="flex flex-col items-center bg-[#F6F6F6] py-[30px] px-5 lg:px-40">
+        <p className="font-bold text-[27px] lg:text-4xl text-[#605954] mb-[27px] lg:mb-6 text-center">
           GALERIA ZDJĘĆ
         </p>
         <p className="max-w-[884px] text-base text-[#463F3A] leading-5 text-center mb-12">
@@ -85,29 +85,34 @@ export default function Home() {
           Montessori. Dzieci bawią się i uczą w wybranych przez siebie kącikach
           tematycznych.
         </p>
-        <Gallery
-          photos={[
-            Photo1,
-            Photo2,
-            Photo3,
-            Photo4,
-            Photo5,
-            Photo6,
-            Photo7,
-            Photo8,
-            Photo9,
-          ]}
-        />
-        <button className="text-lg hover:text-[#FFA25E] transition underline self-end mt-4 px-2">
+        <div className="w-full overflow-x-auto">
+          <div className="min-w-[1280px]">
+            <Gallery
+              horizontal={true}
+              photos={[
+                Photo1,
+                Photo2,
+                Photo3,
+                Photo4,
+                Photo5,
+                Photo6,
+                Photo7,
+                Photo8,
+                Photo9,
+              ]}
+            />
+          </div>
+        </div>
+        <button className="hidden xl:flex text-lg hover:text-[#FFA25E] transition underline self-end mt-4 px-2">
           ZOBACZ WIĘCEJ
         </button>
       </div>
-      <div className="bg-white flex justify-center py-[100px] px-5">
+      <div className="bg-white flex justify-center py-[52px] xl:py-[100px] px-5">
         <PriceList />
       </div>
-      <div className="px-5 pt-14 pb-6 bg-gradient-to-b from-[#F7EAE6] to-white shadow-one relative z-10">
-        <div className="max-w-[1000px] flex items-center justify-between mx-auto text-[#463F3A]">
-          <div className="max-w-[680px]">
+      <div className="px-5 pt-8 lg:pt-14 pb-6 bg-gradient-to-b from-[#F7EAE6] to-white shadow-one relative z-10">
+        <div className="max-w-[1000px] flex flex-col lg:flex-row items-start lg:items-center justify-between mx-auto text-[#463F3A]">
+          <div className="max-w-[680px] mb-16 lg:mb-0">
             <p className="font-semibold text-2xl mb-4">Żłobek już otwarty!</p>
             <p className="text-lg mb-3">
               ruszamy 1 stycznia 2022 - więcej informacji wkrótce...
@@ -122,10 +127,10 @@ export default function Home() {
             </p>
             <p className="text-lg underline">Kliknij i wypełnij ankietę</p>
           </div>
-          <span className="text-4xl">430 zł.</span>
+          <span className="text-4xl self-end lg:self-center">430 zł.</span>
         </div>
       </div>
-      <div className="mb-[100px]">
+      <div className="mb-0 xl:mb-[100px]">
         <RecentPosts posts={recentPosts} />
       </div>
       <Club />

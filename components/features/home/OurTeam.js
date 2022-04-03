@@ -20,6 +20,7 @@ const OurTeam = () => {
     infinite: true,
     slidesToShow: 1,
     variableWidth: true,
+    arrows: false,
   };
 
   const sliderRef = useRef();
@@ -89,11 +90,11 @@ const OurTeam = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center bg-white pt-[100px] pb-[112px] px-20">
-      <p className="font-bold text-4xl text-[#605954] mb-8">
+    <div className="flex flex-col items-center bg-white px-5 py-9 lg:pt-[100px] lg:pb-[112px] lg:px-20">
+      <p className="font-bold text-[27px] lg:text-4xl text-[#605954] mb-8 text-center">
         POZNAJ NASZ ZESPÓŁ
       </p>
-      <p className="max-w-[1000px] text-base text-center leading-5 mb-10">
+      <p className="max-w-[1000px] text-lg lg:text-base text-center leading-5 mb-10">
         Naszą kadrę tworzą ludzie z pasją, miłością i sercem do dziećmi. Tworzą
         indywidualne programy, prowadzą i towarzyszą dziecku, pokazują świat i
         uczą go. Traktują każde dziecko indywidualnie, każde prowadzą według
@@ -103,17 +104,23 @@ const OurTeam = () => {
       <div className="w-full">
         <Slider {...settings} ref={sliderRef}>
           {members.map((member, index) => (
-            <div className="mx-5 py-5 h-full" key={index}>
+            <div className="mr-9 lg:mx-5 py-5 h-full" key={index}>
               <TeamMember {...member} />
             </div>
           ))}
         </Slider>
       </div>
-      <div className="flex mt-5">
-        <button className="flex mx-0.5" onClick={() => sliderRef.current.slickPrev()}>
+      <div className="hidden lg:flex mt-5">
+        <button
+          className="flex mx-0.5"
+          onClick={() => sliderRef.current.slickPrev()}
+        >
           <Image src={ArrowLeft} />
         </button>
-        <button className="flex mx-0.5" onClick={() => sliderRef.current.slickNext()}>
+        <button
+          className="flex mx-0.5"
+          onClick={() => sliderRef.current.slickNext()}
+        >
           <Image src={ArrowRight} />
         </button>
       </div>

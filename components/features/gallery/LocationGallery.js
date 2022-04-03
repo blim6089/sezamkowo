@@ -9,10 +9,31 @@ const LocationGallery = (props) => {
     className: "w-full flex",
     infinite: false,
     slidesToShow: 4,
+    arrows: false,
     afterChange: (i) => {
       console.log(i, props.photos.length);
       setIndex(i);
     },
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
   const sliderRef = useRef();
   const handlePrev = () => {
@@ -35,10 +56,10 @@ const LocationGallery = (props) => {
           style={{ background: props.color }}
         />
       </p>
-      <div className="w-full -mx-2 relative">
+      <div className="w-full lg:-mx-2 relative">
         {index !== 0 && (
           <button
-            className="absolute top-1/2 -translate-y-1/2 -left-5 -translate-x-full flex transform rotate-180"
+            className="absolute top-1/2 -translate-y-1/2 -left-5 -translate-x-full hidden 2xl:flex transform rotate-180"
             onClick={handlePrev}
           >
             <Image src={SliderNext} />
@@ -46,7 +67,7 @@ const LocationGallery = (props) => {
         )}
         {index !== props.photos.length - settings.slidesToShow && (
           <button
-            className="absolute top-1/2 -translate-y-1/2 -right-5 translate-x-full flex"
+            className="absolute top-1/2 -translate-y-1/2 -right-5 translate-x-full hidden 2xl:flex"
             onClick={handleNext}
           >
             <Image src={SliderNext} />
@@ -54,7 +75,7 @@ const LocationGallery = (props) => {
         )}
         <Slider {...settings} ref={sliderRef}>
           {props.photos.map((photo, index) => (
-            <div className="w-1/4 px-2" key={index}>
+            <div className="lg:px-2" key={index}>
               <Image src={photo} />
             </div>
           ))}

@@ -9,18 +9,20 @@ import Checkbox from "./Checkbox";
 
 const ContactForm = () => {
   return (
-    <div className="max-w-[787px] flex flex-col items-center text-[#463F3A]">
-      <p className="text-4xl mb-4 text-center">Masz więcej pytań? </p>
-      <p className="max-w-[658px] text-lg leading-6 text-center mb-5">
+    <div className="w-full max-w-[787px] flex flex-col items-center text-[#463F3A] px-5 xl:px-0">
+      <p className="text-[27px] xl:text-4xl mb-6 xl:mb-4 text-center">
+        Masz więcej pytań?
+      </p>
+      <p className="w-full max-w-[658px] text-lg leading-6 text-center mb-5">
         Jeśli masz więcej pytań napisz do nas chętnie odpowiemy na Twoje
         pytania.
       </p>
-      <div className="flex justify-center mb-6">
-        <span className="min-w-[400px] flex items-center justify-center">
+      <div className="flex flex-col lg:flex-row justify-center mb-6">
+        <span className="w-full lg:min-w-[400px] flex items-center justify-center mb-4 lg:mb-0">
           <Image src={Phone} />
           <span className="text-base text-[#463F3A] mx-2">+48 785 900 905</span>
         </span>
-        <span className="min-w-[400px] flex items-center justify-center">
+        <span className="w-full lg:min-w-[400px] flex items-center justify-center mb-4 lg:mb-0">
           <Image src={Email} />
           <span className="text-base text-[#463F3A] mx-2">
             email <span className="underline">zlobek@sezamkowo.waw.pl.</span>
@@ -42,7 +44,7 @@ const ContactForm = () => {
           <Checkbox label="Marysin Wawerski" />
         </div>
         <div className="mb-8">
-          <TextField multiline placeholder="Wiadomość" />
+          <TextField multiline={true} placeholder="Wiadomość" />
         </div>
         <div className="flex justify-center">
           <Button>

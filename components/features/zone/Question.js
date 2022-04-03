@@ -8,10 +8,10 @@ const Question = (props) => {
   return (
     <div>
       <div
-        className="relative h-[55px] rounded-full px-11 flex items-center bg-white border border-[#C4C4C4] cursor-pointer hover:shadow-locationCard hover:shadow-cardHover transition"
+        className="relative h-auto py-5 min-h-[55px] rounded-[50px] px-8 lg:px-11 flex items-center bg-white border border-[#C4C4C4] cursor-pointer hover:shadow-locationCard hover:shadow-cardHover transition"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-lg text-[#463F3A]">{props.question}</span>
+        <span className="text-lg text-[#463F3A] pr-10">{props.question}</span>
         <div
           className={`absolute right-5 transition transform ${
             isOpen ? `rotate-180` : `rotate-0`

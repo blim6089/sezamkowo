@@ -25,9 +25,9 @@ const Questions = () => {
     },
   ];
   return (
-    <div className="flex justify-center pt-[120px] pb-[84px]">
+    <div className="flex justify-center py-16 lg:pt-[120px] lg:pb-[84px] px-5">
       <div className="flex flex-col items-center w-full max-w-[950px]">
-        <p className="font-bold text-4xl text-center text-[#463F3A] mb-12">
+        <p className="font-bold text-[27px] lg:text-4xl text-center text-[#463F3A] mb-12">
           Często zadawane pytania
         </p>
         <div className="w-full">

@@ -12,13 +12,13 @@ const LocatinoCard = (props) => {
     zoom: 11,
   };
   return (
-    <div className="flex shadow-locationCard hover:shadow-cardHover transition rounded-2xl bg-white p-[18px] pt-3.5">
-      <div className="px-5 py-7">
+    <div className="flex flex-col md:flex-row justify-between shadow-locationCard hover:shadow-cardHover transition rounded-2xl bg-white p-6 md:p-[18px] md:pt-3.5">
+      <div className="p-0 md:px-5 md:py-7 mb-5 md:mb-0">
         <p className="font-bold text-2xl mb-3" style={{ color: props.color }}>
           {props.name}
         </p>
         <p
-          className="max-w-[250px] text-base text-[#463F3A] mb-8"
+          className="max-w-[250px] text-base text-[#463F3A] mb-6 md:mb-8"
           dangerouslySetInnerHTML={{ __html: props.description }}
         />
         <p className="flex items-center mb-4">
@@ -32,7 +32,7 @@ const LocatinoCard = (props) => {
           </span>
         </p>
       </div>
-      <div className="w-[417px] h-[303px] rounded-2xl overflow-hidden">
+      <div className="w-full md:w-[417px] h-[303px] rounded-2xl overflow-hidden">
         <GoogleMapReact
           defaultCenter={mapSetting.center}
           defaultZoom={mapSetting.zoom}

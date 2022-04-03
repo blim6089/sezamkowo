@@ -5,7 +5,7 @@ import Share from "@/assets/images/icons/share.svg";
 
 const Post = (props) => {
   return (
-    <div className="relative transition shadow-teamCard hover:shadow-cardHover rounded-2xl overflow-hidden">
+    <div className="max-w-[335px] relative transition shadow-teamCard hover:shadow-cardHover rounded-2xl overflow-hidden">
       <div className="flex">
         <Image src={props.image} />
       </div>

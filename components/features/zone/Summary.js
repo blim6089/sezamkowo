@@ -26,19 +26,21 @@ const Summary = () => {
   ];
 
   return (
-    <div className="flex justify-center bg-gradient-to-b from-[#D9B99B25] to-white border-b border-b-[#E0AFA0]">
-      <div className="max-w-[1537px] w-full flex justify-between pt-[98px] pb-11">
+    <div className="flex justify-center bg-gradient-to-b from-[#D9B99B25] to-white border-b border-b-[#E0AFA0] px-1 lg:px-5 xl:px-0">
+      <div className="max-w-[1537px] w-full flex flex-wrap justify-between pt-[72px] xl:pt-[98px] pb-0 xl:pb-11">
         {items.map((item, index) => (
           <div
-            className="relative min-w-[303px] px-10 shadow-locationCard hover:shadow-cardHover transition bg-white rounded-2xl"
             key={index}
+            className="w-1/2 px-4 xl:px-0 xl:w-auto lg:min-w-[303px] mb-8 xl:mb-0"
           >
-            <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-0 w-[68px] h-[68px] rounded-full flex items-center justify-center bg-white shadow-locationCard hover:shadow-cardHover transition">
-              <Image src={item.icon} />
+            <div className="h-[76px] xl:h-auto relative shadow-locationCard px-1 lg:px-10 hover:shadow-cardHover transition bg-white rounded-2xl">
+              <div className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-0 w-9 h-9 xl:w-[68px] xl:h-[68px] rounded-full flex items-center justify-center bg-white shadow-locationCard hover:shadow-cardHover transition">
+                <Image src={item.icon} className="scale-50 xl:scale-100" />
+              </div>
+              <p className="font-bold text-sm xl:text-2xl text-[#646464] text-center pt-6 xl:pt-16 xl:pb-5">
+                {item.label}
+              </p>
             </div>
-            <p className="font-bold text-2xl text-[#646464] text-center pt-16 pb-5">
-              {item.label}
-            </p>
           </div>
         ))}
       </div>
