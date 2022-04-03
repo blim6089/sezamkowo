@@ -56,7 +56,7 @@ const Schedule = () => {
   ];
 
   return (
-    <div className="flex justify-center px-5 py-6 lg:py-8 bg-[#F6F6F6]">
+    <div className="flex justify-center px-5 py-6 lg:py-8 bg-[#F6F6F6]" id="schedule">
       <div className="w-full max-w-[670px]">
         <p className="font-bold text-[27px] lg:text-4xl text-[#463F3A] text-center mb-11 lg:mb-[50px]">
           Plan Dnia

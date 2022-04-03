@@ -10,7 +10,7 @@ const Organization = () => {
     "Mamy ogromną nadzieję, że w tej trudnej sytuacji zachowując maksimum ostrożności i higieny, wspólnie z Państwem zapewnimy dzieciom bezpieczne warunki przebywania w żłobku.",
   ];
   return (
-    <div className="flex justify-center px-5 py-8 lg:pt-12 lg:pb-24">
+    <div className="flex justify-center px-5 py-8 lg:pt-12 lg:pb-24" id="organization">
       <div className="max-w-[1375px] flex flex-col">
         <p className="hidden lg:block font-bold text-4xl text-[#646464] mb-12 text-center">
           Organizacja

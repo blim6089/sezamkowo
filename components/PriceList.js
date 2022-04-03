@@ -98,7 +98,7 @@ const PriceList = (props) => {
               active === `new`
                 ? `bg-[#FFF6EA]`
                 : `bg-white opacity-70  border-r-0`
-            } font-bold text-lg leading-none md:text-xl text-[#FFA768] min-h-[50px] py-4 lg:py-0 px-4 lg:px-10 border border-[#FFA25E] rounded-l-[50px]`}
+            } font-bold hover:bg-[#FFF6EA] hover:opacity-100 text-lg leading-none md:text-xl text-[#FFA768] min-h-[50px] py-4 lg:py-0 px-4 lg:px-10 border border-[#FFA25E] rounded-l-[50px]`}
           >
             NOWY WAWER
           </button>
@@ -108,7 +108,7 @@ const PriceList = (props) => {
               active === `old`
                 ? `border-[#FF8FA3] text-[#FF8FA3] bg-[#FFEFF2]`
                 : `bg-white opacity-70 text-[#FFA768]  border-l-0`
-            } font-bold text-lg leading-none md:text-xl min-h-[50px] py-4 lg:py-0 px-4 lg:px-10 border border-[#FFA25E] rounded-r-[50px]`}
+            } hover:text-[#FF8FA3] hover:bg-[#FFEFF2] hover:opacity-100 hover:border-[#FF8FA3] font-bold text-lg leading-none md:text-xl min-h-[50px] py-4 lg:py-0 px-4 lg:px-10 border border-[#FFA25E] rounded-r-[50px]`}
           >
             MARYSIN WAWERSKI
           </button>

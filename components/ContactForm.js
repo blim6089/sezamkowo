@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TextField from "@/components/TextField";
+import FileSelect from "@/components/FileSelect";
 import Button from "@/components/Button";
 
 import Email from "@/assets/images/icons/email.svg";
@@ -24,9 +25,9 @@ const ContactForm = () => {
         </span>
         <span className="w-full lg:min-w-[400px] flex items-center justify-center mb-4 lg:mb-0">
           <Image src={Email} />
-          <span className="text-base text-[#463F3A] mx-2">
+          <a href="#" className="text-base text-[#463F3A] mx-2">
             email <span className="underline">zlobek@sezamkowo.waw.pl.</span>
-          </span>
+          </a>
         </span>
       </div>
       <div className="w-full">
@@ -43,8 +44,11 @@ const ContactForm = () => {
           <Checkbox label="Nowy Wawer" />
           <Checkbox label="Marysin Wawerski" />
         </div>
-        <div className="mb-8">
+        <div className="mb-3.5">
           <TextField multiline={true} placeholder="Wiadomość" />
+        </div>
+        <div className="mb-8">
+          <FileSelect type="file" label="Załączniki" />
         </div>
         <div className="flex justify-center">
           <Button>

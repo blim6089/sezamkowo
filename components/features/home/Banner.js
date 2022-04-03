@@ -26,7 +26,7 @@ const Banner = () => {
         </p>
         <div className="flex flex-col md:flex-row justify-center">
           <Link href="/location/new">
-            <a className="mb-[18px] md:mb-0 mx-0 md:mx-5 xl:mx-14 w-full md:w-auto flex items-center bg-white shadow hover:shadow-lg transition rounded-2xl px-8 py-6 xl:p-10 pr-0">
+            <a className="mb-[18px] md:mb-0 mx-0 md:mx-5 xl:mx-14 w-full md:w-auto flex items-center bg-white shadow hover:shadow-cardHover transition rounded-2xl px-8 py-6 xl:p-10 pr-0">
               <div className="shrink-0 w-[46px] h-10 xl:w-[102px] xl:h-[90px] flex items-center justify-center rounded-[10px] xl:rounded-2xl bg-[#FFF3EB] border border-[#FFA25E]">
                 <div className="hidden xl:flex">
                   <Image src={HomeWarning} />
@@ -41,7 +41,7 @@ const Banner = () => {
             </a>
           </Link>
           <Link href="/location/old">
-            <a className="mb-[18px] md:mb-0 mx-0 md:mx-5 xl:mx-14 w-full md:w-auto flex items-center bg-white shadow hover:shadow-lg transition rounded-2xl px-8 py-6 xl:p-10 pr-0">
+            <a className="mb-[18px] md:mb-0 mx-0 md:mx-5 xl:mx-14 w-full md:w-auto flex items-center bg-white shadow hover:shadow-cardHover transition rounded-2xl px-8 py-6 xl:p-10 pr-0">
               <div className="shrink-0 w-[46px] h-10 xl:w-[102px] xl:h-[90px] flex items-center justify-center rounded-[10px] xl:rounded-2xl bg-[#FFEDF0] border border-[#FF8FA3]">
                 <div className="hidden xl:flex">
                   <Image src={HomeDanger} />

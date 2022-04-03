@@ -8,7 +8,7 @@ const Document = () => {
   ];
 
   return (
-    <div className="flex justify-center pb-[112px] pl-10 pr-5">
+    <div className="flex justify-center pb-[112px] pl-10 pr-5" id="document">
       <div className="w-full max-w-[950px]">
         <p className="font-bold text-[27px] lg:text-4xl text-[#463F3A] text-center mb-6 lg:mb-[50px] -ml-5">
           Dokumenty do pobrania

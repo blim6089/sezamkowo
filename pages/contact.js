@@ -1,8 +1,8 @@
 import Image from "next/image";
 import LocationCard from "@/components/LocationCard";
 import ContactForm from "@/components/ContactForm";
-import Facebook from "@/assets/images/icons/facebook-dark-lg.svg";
-import Instagram from "@/assets/images/icons/instagram-dark-lg.svg";
+import Facebook from "@/assets/images/icons/facebook-warning-lg.svg";
+import Instagram from "@/assets/images/icons/instagram-warning-lg.svg";
 
 export default function Contact() {
   const locations = [
@@ -38,10 +38,16 @@ export default function Contact() {
           Odwiedź nasze media społecznościowe
         </p>
         <div className="flex items-center">
-          <a href="#" className="mx-2">
+          <a
+            href="#"
+            className="mx-2 brightness-0 invert-1 opacity-70 hover:brightness-100 hover:invert-0 hover:opacity-100 transition"
+          >
             <Image src={Facebook} />
           </a>
-          <a href="#" className="mx-2">
+          <a
+            href="#"
+            className="mx-2 brightness-0 invert-1 opacity-70 hover:brightness-100 hover:invert-0 hover:opacity-100 transition"
+          >
             <Image src={Instagram} />
           </a>
         </div>

@@ -47,11 +47,10 @@ export default function GalleryPage() {
           />
           <LocationGallery
             photos={[
-              LocationPhoto5,
+              LocationPhoto8,
               LocationPhoto6,
               LocationPhoto7,
               LocationPhoto8,
-              LocationPhoto5,
               LocationPhoto6,
               LocationPhoto7,
               LocationPhoto8,

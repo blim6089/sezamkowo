@@ -18,9 +18,28 @@ import ArrowRight from "@/assets/images/icons/chevron-right.svg";
 const OurTeam = () => {
   const settings = {
     infinite: true,
-    slidesToShow: 1,
-    variableWidth: true,
+    slidesToShow: 4,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const sliderRef = useRef();

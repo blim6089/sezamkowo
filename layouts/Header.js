@@ -52,7 +52,7 @@ const Header = () => {
   }, [router.events]);
 
   return (
-    <div className="relative z-50 h-[104px] md:h-[72px] bg-white flex items-end md:items-center justify-between shadow-header pl-5 2xl:pl-16 pr-5 pb-6 md:pb-0">
+    <div className="fixed top-0 left-0 right-0 z-[100] h-[104px] md:h-[72px] bg-white flex items-end md:items-center justify-between shadow-header pl-5 2xl:pl-16 pr-5 pb-6 md:pb-0">
       <Link href="/">
         <a className="flex w-[190px] md:w-auto shrink-0">
           <Image src={Logo} />
@@ -101,7 +101,7 @@ const Header = () => {
               ) : (
                 <div className="hidden xl:block h-full relative">
                   <button
-                    onClick={() => setIsOpenSubMenu(!isOpenSubMenu)}
+                    onMouseOver={() => setIsOpenSubMenu(true)}
                     className={`relative flex items-center h-full px-0 xl:px-3 2xl:px-6 font-medium text-2xl xl:text-base 2xl:text-lg text-[#463F3A] cursor-pointer border-b-2 ${
                       router.pathname.indexOf(link.href) !== -1
                         ? `border-b-[#463F3A]`
@@ -119,7 +119,7 @@ const Header = () => {
                           <Link href={children.href} key={index}>
                             <a
                               onClick={() => setIsOpenSubMenu(false)}
-                              className="py-2 relative flex items-center h-full font-medium text-lg text-[#463F3A] cursor-pointer"
+                              className="py-2 relative flex items-center h-full font-medium text-lg hover:text-[#000000] text-[#463F3A] cursor-pointer"
                             >
                               {children.label}
                             </a>
