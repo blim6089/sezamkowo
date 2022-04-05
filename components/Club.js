@@ -57,7 +57,9 @@ const Club = (props) => {
                 <Image src={Email} />
                 <span className="text-base text-[#463F3A] mx-2">
                   email{" "}
-                  <span className="underline">zlobek@sezamkowo.waw.pl.</span>
+                  <a href="#" className="underline">
+                    zlobek@sezamkowo.waw.pl.
+                  </a>
                 </span>
               </span>
             </div>
