@@ -69,12 +69,12 @@ const Footer = () => {
 
   return (
     <div className="relative flex flex-col md:flex-row justify-between pt-6 px-5 2xl:px-40 pb-[100px] bg-[#FBFBFB] border-t border-t-[#DFA08D]">
-      <div className="flex flex-wrap xl:flex-nowrap mb-5 md:mb-0">
+      <div className="flex flex-col md:flex-row flex-wrap xl:flex-nowrap mb-5 md:mb-0">
         {links.map((link, index) => {
           return (
             <div
               key={index}
-              className="w-1/2 md:w-full md:max-w-[175px] md:mr-12"
+              className="w-full md:w-auto max-w-[143px] md:mr-12"
             >
               <Link
                 href={link.path}
@@ -118,8 +118,8 @@ const Footer = () => {
               +48 737 309 545
             </span>
           </div>
-          <div className="w-1/2 md:w-auto flex flex-col items-end pl-8">
-            <span className="font-bold text-base md:text-lg text-[#646464] mb-1.5 md:mb-[18px]">
+          <div className="w-1/2 md:w-auto flex flex-col items-end md:pl-8">
+            <span className="font-bold text-base md:text-lg text-right text-[#646464] mb-1.5 md:mb-[18px]">
               Marysin Wawerski
             </span>
             <span className="text-sm md:text-base text-[#646464] leading-5 text-right mb-1 md:mb-4">
@@ -127,7 +127,7 @@ const Footer = () => {
               <br />
               04-538 Warszawa
             </span>
-            <span className="text-sm md:text-lg text-[#646464]">
+            <span className="text-sm md:text-lg text-right text-[#646464]">
               +48 737 306 690
             </span>
           </div>

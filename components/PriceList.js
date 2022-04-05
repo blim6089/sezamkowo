@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import Button from "@/components/Button";
@@ -163,7 +164,9 @@ const PriceList = (props) => {
           ))}
         </div>
       </div>
-      <Button>Wypełnij formularz </Button>
+      <Button>
+        <Link href="/form">Wypełnij formularz</Link>
+      </Button>
     </div>
   );
 };
