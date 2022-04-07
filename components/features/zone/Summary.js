@@ -29,13 +29,23 @@ const Summary = () => {
     },
   ];
 
+  const handleScroll = (event, id) => {
+    event.preventDefault();
+    window.scrollTo(
+      0,
+      document.querySelector(`#${id}`).getBoundingClientRect().top -
+        document.querySelector("#header").clientHeight
+    );
+  };
+
   return (
     <div className="flex justify-center bg-gradient-to-b from-[#D9B99B25] to-white border-b border-b-[#E0AFA0] px-1 lg:px-5 xl:px-0">
       <div className="max-w-[1537px] w-full flex flex-wrap justify-between pt-[72px] xl:pt-[98px] pb-0 xl:pb-11">
         {items.map((item, index) => (
           <a
             key={index}
-            href={`#${item.id}`}
+            onClick={(e) => handleScroll(e, item.id)}
+            href="#"
             className="w-1/2 px-4 xl:px-0 xl:w-auto lg:min-w-[303px] mb-8 xl:mb-0"
           >
             <div className="h-[76px] xl:h-auto relative shadow-locationCard px-1 lg:px-10 hover:shadow-cardHover transition bg-white rounded-2xl group">

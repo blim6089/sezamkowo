@@ -52,7 +52,7 @@ const Header = () => {
   }, [router.events]);
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[100] h-[104px] md:h-[72px] bg-white flex items-end md:items-center justify-between shadow-header pl-5 2xl:pl-16 pr-5 pb-6 md:pb-0">
+    <div className="fixed top-0 left-0 right-0 z-[100] h-[104px] md:h-[72px] bg-white flex items-end md:items-center justify-between shadow-header pl-5 2xl:pl-16 pr-5 pb-6 md:pb-0" id="header">
       <Link href="/">
         <a className="flex w-[190px] md:w-auto shrink-0">
           <Image src={Logo} />
